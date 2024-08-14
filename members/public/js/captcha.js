@@ -9,7 +9,7 @@ function getCaptcha() {
 }
 
 window.onloadTurnstileCallback = function () {
-    axios.get(`https://api-${window.location.host}/api/v1/captcha`)
+    axios.get(`https://${window.location.host}/api/v1/captcha`)
         .then(response => {
             const responseData = response.data;
             cjwt = responseData.jwt

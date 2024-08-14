@@ -13,7 +13,7 @@ function formatUnixTimestamp(unixTimestamp) {
 window.oauth_link = ''
 axios({
     method: 'get',
-    url: `https://api-${window.location.host}/api/v1/user`,
+    url: `https://${window.location.host}/api/v1/user`,
     headers: {
         authorization: localStorage.getItem("token")
     }
@@ -47,7 +47,7 @@ axios({
 
 axios({
     method: 'get',
-    url: `https://api-${window.location.host}/api/v1/stock`,
+    url: `https://${window.location.host}/api/v1/stock`,
     headers: {
         authorization: localStorage.getItem("token")
     }
@@ -67,7 +67,7 @@ axios({
 
 axios({
     method: 'get',
-    url: `https://api-${window.location.host}/api/v1/user/orders`,
+    url: `https://${window.location.host}/api/v1/user/orders`,
     headers: {
         authorization: localStorage.getItem("token")
     }
