@@ -401,7 +401,7 @@
             }
             axios({
                 method: 'delete',
-                url: `https://api-${window.location.host}/api/v1/user/orders/${order_id}`,
+                url: `https://${window.location.host}/api/v1/user/orders/${order_id}`,
                 headers: {
                     authorization: localStorage.getItem("token")
                 }
@@ -421,7 +421,7 @@
         function getActivity() {
             axios({
                 method: 'get',
-                url: `https://api-${window.location.host}/api/v1/user/activity`,
+                url: `https://${window.location.host}/api/v1/user/activity`,
                 headers: {
                     authorization: localStorage.getItem("token")
                 }

@@ -14,7 +14,7 @@
     if (new URLSearchParams(window.location.search).get('code') != null) {
         axios({
             method: 'post',
-            url: `https://api-${window.location.host}/api/v1/oauth`,
+            url: `https://${window.location.host}/api/v1/oauth`,
             data: {
                 code: new URLSearchParams(window.location.search).get('code'),
                 guild_id: new URLSearchParams(window.location.search).get('guild_id'),

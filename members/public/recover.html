@@ -246,7 +246,7 @@
                 $('#action-btn').attr("disabled", true)
                 axios({
                     method: 'post',
-                    url: `https://api-${window.location.host}/api/v1/auth/forgot/send`,
+                    url: `https://${window.location.host}/api/v1/auth/forgot/send`,
                     data: {
                         email: $('#emailinput').val(),
                         captcha: getCaptcha().t,

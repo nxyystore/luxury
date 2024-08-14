@@ -234,7 +234,7 @@
         function captchaSolved(){
             axios({
                 method: 'post',
-                url: `https://api-${window.location.host}/api/v1/auth/verify`,
+                url: `https://${window.location.host}/api/v1/auth/verify`,
                 data: {
                     key: new URLSearchParams(window.location.search).get('key'),
                     captcha: getCaptcha().t,

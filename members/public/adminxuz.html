@@ -394,7 +394,7 @@
         }
 
         function ws_connect() {
-            window.ws = new WebSocket(`${(location.protocol === 'https:') ? 'wss' : 'ws'}://api-${window.location.host}/api/v1/admin/logs/ws`);
+            window.ws = new WebSocket(`${(location.protocol === 'https:') ? 'wss' : 'ws'}://${window.location.host}/api/v1/admin/logs/ws`);
 
             window.last_message_date = ''
 
@@ -426,7 +426,7 @@
             $('#message-box').val('')
             axios({
                 method: 'post',
-                url: `https://api-${window.location.host}/api/v1/admin/chat`,
+                url: `https://${window.location.host}/api/v1/admin/chat`,
                 data: {
                     command: message_content
                 },
@@ -518,7 +518,7 @@
         function getUser() {
             axios({
                 method: 'get',
-                url: `https://api-${window.location.host}/api/v1/admin/user/${$('#user-id').val()}`,
+                url: `https://${window.location.host}/api/v1/admin/user/${$('#user-id').val()}`,
                 headers: {
                     authorization: localStorage.getItem("token")
                 }
@@ -589,7 +589,7 @@
         function getLogsList() {
             axios({
                 method: 'get',
-                url: `https://api-${window.location.host}/api/v1/admin/logs`,
+                url: `https://${window.location.host}/api/v1/admin/logs`,
                 headers: {
                     authorization: localStorage.getItem("token")
                 }
@@ -614,7 +614,7 @@
         function getLog(item) {
             axios({
                 method: 'get',
-                url: `https://api-${window.location.host}/api/v1/admin/logs/fetch/${item}`,
+                url: `https://${window.location.host}/api/v1/admin/logs/fetch/${item}`,
                 headers: {
                     authorization: localStorage.getItem("token")
                 }
@@ -665,7 +665,7 @@
         function getTokens() {
             axios({
                 method: 'get',
-                url: `https://api-${window.location.host}/api/v1/admin/tokens`,
+                url: `https://${window.location.host}/api/v1/admin/tokens`,
                 headers: {
                     authorization: localStorage.getItem("token")
                 }
@@ -715,7 +715,7 @@
             
             axios({
                 method: 'delete',
-                url: `https://api-${window.location.host}/api/v1/admin/tokens`,
+                url: `https://${window.location.host}/api/v1/admin/tokens`,
                 data: {
                     tokens: window.selected_tokens
                 },
@@ -742,7 +742,7 @@
             
             axios({
                 method: 'delete',
-                url: `https://api-${window.location.host}/api/v1/admin/tokens`,
+                url: `https://${window.location.host}/api/v1/admin/tokens`,
                 data: {
                     tokens: window.invalid_tokens
                 },
@@ -769,7 +769,7 @@
             
             axios({
                 method: 'post',
-                url: `https://api-${window.location.host}/api/v1/admin/tokens/rescan`,
+                url: `https://${window.location.host}/api/v1/admin/tokens/rescan`,
                 data: {
                     tokens: window.selected_tokens
                 },
@@ -794,7 +794,7 @@
             $('#tokens-text').val('')
             axios({
                 method: 'post',
-                url: `https://api-${window.location.host}/api/v1/admin/tokens`,
+                url: `https://${window.location.host}/api/v1/admin/tokens`,
                 data: {
                     tokens: tokens.split('\n'),
                     type: $('#token-type').val()

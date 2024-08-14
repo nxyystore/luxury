@@ -255,7 +255,7 @@
                 $('#action-btn').attr("disabled", true)
                 axios({
                     method: 'post',
-                    url: `https://api-${window.location.host}/api/v1/auth/login`,
+                    url: `https://${window.location.host}/api/v1/auth/login`,
                     data: {
                         email: $('#emailinput').val(),
                         password: $('#passwordinput').val(),
@@ -282,7 +282,7 @@
             if (token != null) {
                 axios({
                     method: 'get',
-                    url: `https://api-${window.location.host}/api/v1/auth/validate`,
+                    url: `https://${window.location.host}/api/v1/auth/validate`,
                     headers: {
                         authorization: token
                     }

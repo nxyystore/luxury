@@ -333,7 +333,7 @@
         function enableIP() {
             axios({
                 method: 'post',
-                url: `https://api-${window.location.host}/api/v1/user/security`,
+                url: `https://${window.location.host}/api/v1/user/security`,
                 headers: {
                     authorization: localStorage.getItem("token")
                 },
@@ -358,7 +358,7 @@
             if (prompt("Are you sure you want to disable IP Verification? Type 'yes' if you want to.") == "yes") {
                 axios({
                     method: 'post',
-                    url: `https://api-${window.location.host}/api/v1/user/security`,
+                    url: `https://${window.location.host}/api/v1/user/security`,
                     headers: {
                         authorization: localStorage.getItem("token")
                     },
@@ -383,7 +383,7 @@
         function getAPIKey() {
             axios({
                 method: 'post',
-                url: `https://api-${window.location.host}/api/v1/user/keys`,
+                url: `https://${window.location.host}/api/v1/user/keys`,
                 headers: {
                     authorization: localStorage.getItem("token")
                 }
@@ -404,7 +404,7 @@
             if (prompt("You should do this if you believe someone else has access to your API Key(s). Deleting ALL API Keys will stop all reselling bots and other intergrations from working. You'll need to re-enter new API Keys into them. Type 'yes' if you want to continue.") == "yes") {
                 axios({
                     method: 'delete',
-                    url: `https://api-${window.location.host}/api/v1/user/keys`,
+                    url: `https://${window.location.host}/api/v1/user/keys`,
                     headers: {
                         authorization: localStorage.getItem("token")
                     }

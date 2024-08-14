@@ -332,7 +332,7 @@
         var costs = {}
         axios({
             method: 'get',
-            url: `https://api-${window.location.host}/api/v1/user/orders/costs`,
+            url: `https://${window.location.host}/api/v1/user/orders/costs`,
             headers: {
                 authorization: localStorage.getItem('token')
             }
@@ -420,7 +420,7 @@
 
             axios({
                 method: 'post',
-                url: `https://api-${window.location.host}/api/v1/user/orders`,
+                url: `https://${window.location.host}/api/v1/user/orders`,
                 data: {
                     order: {
                         '0': parseInt($('#prod-0').val()),
